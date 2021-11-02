@@ -11,3 +11,6 @@ while nelegido != naleatorio:
     print("Vuelve a intentarlo")
     intentos += 1
     nelegido = input(print("Introduce el número que crees que se ha generado: "))
+if nelegido == naleatorio:
+    print("Has acertado!!!")
+    print("El número de intentos que has necesitado es " + str(intentos))
