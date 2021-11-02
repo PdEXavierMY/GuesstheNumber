@@ -2,7 +2,6 @@ import random
 naleatorio = random.randint(0, 100)
 nelegido = int(input("Introduce el número que crees que se ha generado: "))
 intentos = 1
-print(str(naleatorio))
 while nelegido != naleatorio:
     print("El número elegido no es el correcto")
     if nelegido < naleatorio:
