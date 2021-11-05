@@ -1,7 +1,10 @@
 import random
-print("Se va a generar un número aleatorio entero.")
+print("Se va a generar un número aleatorio entero de entre 0 y 99.")
 naleatorio = random.randint(0, 99)
 nelegido = int(input("Introduce el número que crees que se ha generado: "))
+if nelegido == SyntaxError:
+    print("Por favor, introduzca un número entero.")
+    nelegido = int(input("Introduce el número que crees que se ha generado: "))
 intentos = 1
 while nelegido != naleatorio:
     print("El número elegido no es el correcto.")
