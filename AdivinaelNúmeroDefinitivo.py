@@ -2,15 +2,16 @@ import random
 print("Se va a generar un número aleatorio entero de entre 0 y 99.")
 numero = random.randint(0, 99)
 
-def pedir_numero(): 
+def pedir_numero(invitacion, minimo, maximo):
+    invitacion += " Entre " + str(minimo) + " y " + str(maximo) + " : "
     while True: 
-        entrada = input("Introduzca un número entre 0 y 99: ") 
+        entrada = input(invitacion) 
         try: 
-            entrada = int(entrada) 
+            entrada = int(entrada)
         except:
             pass
         else: 
-            if 0 <= entrada <= 99: 
+            if minimo <= entrada <= maximo: 
                 break 
     return entrada
 
