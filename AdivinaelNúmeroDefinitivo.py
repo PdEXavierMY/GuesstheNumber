@@ -3,23 +3,16 @@ print("Se va a generar un número aleatorio entero de entre 0 y 99.")
 naleatorio = random.randint(0, 99)
 def pedirnumero():
     while True:
-        nelegido = input("Introduce el número que crees que se ha generado: ")
+        numero = input("Introduce el número que crees que se ha generado: ")
         try:
-        nelegido = int(nelegido)
-    except:
-        print("Por favor, introduce un número entero del 0 al 99")
-    else:
-        if 0 <= nelegido <= 99:
-            break
-while True:
-    nelegido = input("Introduce el número que crees que se ha generado: ")
-    try:
-        nelegido = int(nelegido)
-    except:
-        print("Por favor, introduce un número entero del 0 al 99")
-    else:
-        if 0 <= nelegido <= 99:
-            break
+            numero = int(nelegido)
+        except:
+            print("Por favor, introduce un número entero del 0 al 99")
+        else:
+            if 0 <= numero <= 99:
+                break
+    return numero
+
 intentos = 1
 while nelegido != naleatorio:
     print("El número elegido no es el correcto.")
