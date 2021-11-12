@@ -1,4 +1,6 @@
 import sys
+MIN = 0
+MAX = 99
 
 def pedir_numero(invitacion):
     while True: 
@@ -9,6 +11,10 @@ def pedir_numero(invitacion):
             print("Solo estan autorizados los carácteres [0-9].", file = sys.stderr)
         else: 
             return entrada
+
+def pedir_numero_limite(invitacion, minimo=MAX, maximo=MAX):
+    while True:
+        invitacion = "{} entre {} y {} incluidos".format(invitacion, minimo, maximo)
 
 numero = pedir_numero("Introduzca el número a adivinar")
 minimo = MIN
