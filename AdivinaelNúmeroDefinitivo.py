@@ -35,15 +35,25 @@ def jugar_una_vez(numero, minimo, maximo):
         minimo = maximo = intento 
     return victoria, minimo, maximo
 
-minimo = maximo = 0
-while True:
-    minimo = pedir_numero("Seleccione el mínimo: ") 
-    maximo = pedir_numero("Seleccione el máximo: ") 
-    if maximo > minimo: 
-        break
-numero = pedir_numero_limite("Introduzca el número a adivinar", minimo, maximo) 
+def pedir_numero_incognita():
+    return pedir_numero_limite("Introduzca el número a adivinar", minimo, maximo)
 
-while True: 
-    victoria, minimo, maximo = jugar_una_vez(numero, minimo, maximo)  
-    if victoria: 
-        break
+def jugar_una_PARTIDA(numero, minimo, maximo):
+    while True:
+        victoria, minimo, maximo = jugar_una_vez(numero, minimo, maximo)
+        if victoria:
+            return
+
+def decidir_limites():
+    while True:
+        minimo = pedir_numero("¿Cuál es el límite inferior? ")
+        maximo = pedir_numero("¿Cuál es el límite superior? ")
+        if maximo > minimo:
+            return minimo, maximo
+
+def jugar():
+    minimo, maximo = decidir_limites()
+    numero = pedir_numero_incognita()
+    jugar_una_PARTIDA(numero, minimo, maximo)
+
+jugar()
