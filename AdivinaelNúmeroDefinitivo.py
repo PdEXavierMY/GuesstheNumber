@@ -12,4 +12,15 @@ def pedir_numero():
         else: 
             if 9 <= entrada <= 99: 
                 break 
-    return entrada 
+    return entrada
+
+print("Intente adivinar el número") 
+while True: 
+    intento = pedir_numero() 
+    if intento < numero: 
+        print("Demasiado pequeño") 
+    elif intento > numero: 
+        print("Demasiado grande") 
+    else: 
+        print ("¡Ha ganado!")
+        break
