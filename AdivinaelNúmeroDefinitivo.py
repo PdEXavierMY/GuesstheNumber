@@ -14,15 +14,15 @@ def pedir_numero(invitacion):
 
 def pedir_numero_limite(invitacion, minimo=MAX, maximo=MAX):
     while True:
-        invitacion = "{} entre {} y {} incluidos".format(invitacion, minimo, maximo)
+        invitacion = "{} entre {} y {} incluidos ".format(invitacion, minimo, maximo)
         entrada = pedir_numero(invitacion) 
         if minimo <= entrada <= maximo: 
             return entrada
 
 minimo = maximo = 0
 while True:
-    minimo = pedir_numero("Seleccione el mínimo") 
-    maximo = pedir_numero("Seleccione el máximo") 
+    minimo = pedir_numero("Seleccione el mínimo ") 
+    maximo = pedir_numero("Seleccione el máximo ") 
     if maximo > minimo: 
         break
 numero = pedir_numero_limite("Introduzca el número a adivinar", minimo, maximo) 
