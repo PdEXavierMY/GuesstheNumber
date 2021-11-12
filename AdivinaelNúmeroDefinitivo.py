@@ -25,7 +25,7 @@ while True:
     maximo = pedir_numero("Seleccione el máximo") 
     if maximo > minimo: 
         break
-numero = pedir_numero("Introduzca el número a adivinar", minimo, maximo) 
+numero = pedir_numero_limite("Introduzca el número a adivinar", minimo, maximo) 
 
 while True: 
     intento = pedir_numero_limite("Adivine el número", minimo, maximo) 
