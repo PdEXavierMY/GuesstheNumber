@@ -14,23 +14,17 @@ def pedir_numero():
     return numero
 
 intentos = 1
-while nelegido != naleatorio:
-    print("El número elegido no es el correcto.")
-    if nelegido < naleatorio:
+while True:
+    intento = pedir_numero()
+    intentos += 1
+    if numero < naleatorio:
+        print("El número introducido no es el correcto")
         print("El número generado es mayor al introducido.")
-    elif nelegido > naleatorio:
+        print("Vuelve a intentarlo.")
+    elif numero > naleatorio:
+        print("El número introducido no es el correcto")
         print("El número generado es menor al introducido.")
         print("Vuelve a intentarlo.")
     else:
         print("Has acertado!!!")
         print("El número de intentos que has necesitado es " + str(intentos))
-    intentos += 1
-    while True:
-        nelegido = input("Introduce el número que crees que se ha generado: ")
-        try:
-            nelegido = int(nelegido)
-        except:
-            print("Por favor, introduce un número entero del 0 al 99")
-        else:
-            if 0 <= nelegido <= 99:
-                break
