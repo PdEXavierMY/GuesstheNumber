@@ -20,7 +20,6 @@ def pedir_numero(invitacion, minimo, maximo):
 numero = pedir_numero("Introduzca el número a adivinar", MIN, MAX) 
 minimo = MIN
 maximo = MAX
-print("Intente adivinar el número") 
 while True: 
     intento = pedir_numero("Adivine el número", minimo, maximo) 
     if intento < numero: 
