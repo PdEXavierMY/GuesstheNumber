@@ -26,8 +26,9 @@ while True:
     if maximo > minimo: 
         break
 numero = pedir_numero("Introduzca el número a adivinar", minimo, maximo) 
+
 while True: 
-    intento = pedir_numero("Adivine el número", minimo, maximo) 
+    intento = pedir_numero_limite("Adivine el número", minimo, maximo) 
     if intento < numero: 
         print("Demasiado pequeño")
         minimo = intento + 1
