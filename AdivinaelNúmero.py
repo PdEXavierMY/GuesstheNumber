@@ -2,7 +2,7 @@ import random
 print("Se va a generar un número aleatorio entero de entre 0 y 99.")
 naleatorio = random.randint(0, 99)
 while True:
-    nelegido = input("Introduce el número que crees que se ha generado: ")
+    nelegido = input("Introduce el número que crees que se ha generado del 0 al 99: ")
     try:
         nelegido = int(nelegido)
     except:
@@ -20,7 +20,7 @@ while nelegido != naleatorio:
     print("Vuelve a intentarlo.")
     intentos += 1
     while True:
-        nelegido = input("Introduce el número que crees que se ha generado: ")
+        nelegido = input("Introduce el número que crees que se ha generado del 0 al 99: ")
         try:
             nelegido = int(nelegido)
         except:
