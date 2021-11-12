@@ -20,8 +20,7 @@ def pedir_numero_limite(invitacion, minimo=MAX, maximo=MAX):
             return entrada
 
 def jugar_una_vez(numero, minimo, maximo): 
-    intento = pedir_numero_limite("Adivine el número", 
-                                 minimo, maximo) 
+    intento = pedir_numero_limite("Adivine el número", minimo, maximo) 
     if intento < numero: 
         print("Demasiado pequeño") 
         minimo = intento + 1 
@@ -45,13 +44,6 @@ while True:
 numero = pedir_numero_limite("Introduzca el número a adivinar", minimo, maximo) 
 
 while True: 
-    intento = pedir_numero_limite("Adivine el número", minimo, maximo) 
-    if intento < numero: 
-        print("Demasiado pequeño")
-        minimo = intento + 1
-    elif intento > numero: 
-        print("Demasiado grande") 
-        maximo = intento - 1
-    else: 
-        print ("¡Ha ganado!")
+    victoria, minimo, maximo = jugar_una_vez(numero, minimo, maximo)  
+    if victoria: 
         break
