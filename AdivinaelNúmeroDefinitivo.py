@@ -1,6 +1,3 @@
-import random
-print("Se va a generar un número aleatorio entero de entre 0 y 99.")
-aleatorio = random.randint(0, 99)
 MIN = 0
 MAX= 99
 
