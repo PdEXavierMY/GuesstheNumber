@@ -21,8 +21,8 @@ def pedir_numero_limite(invitacion, minimo=MAX, maximo=MAX):
 
 minimo = maximo = 0
 while True:
-    minimo = pedir_numero("Seleccione el mínimo ") 
-    maximo = pedir_numero("Seleccione el máximo ") 
+    minimo = pedir_numero("Seleccione el mínimo: ") 
+    maximo = pedir_numero("Seleccione el máximo: ") 
     if maximo > minimo: 
         break
 numero = pedir_numero_limite("Introduzca el número a adivinar", minimo, maximo) 
