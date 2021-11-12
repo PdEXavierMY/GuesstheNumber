@@ -1,5 +1,18 @@
 import random
 numero = random.randint(0, 100)
+
+def pedir_numero(): 
+    while True: 
+        entrada = input("Introduzca un número entre 0 y 99: ") 
+        try: 
+            entrada = int(entrada) 
+        except: 
+            pass 
+        else: 
+            if 9 <= entrada <= 99: 
+                break 
+    return entrada 
+
 print("Introduzca el número a adivinar")
 while True:
     numero = input("Introduzca un número entre 0 y 99 incluídos: ")
