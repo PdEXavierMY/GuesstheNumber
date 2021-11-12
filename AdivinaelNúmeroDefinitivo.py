@@ -5,7 +5,7 @@ MIN = 0
 MAX= 99
 
 def pedir_numero(invitacion, minimo, maximo):
-    invitacion += " Entre " + str(minimo) + " y " + str(maximo) + " : "
+    invitacion += " entre " + str(minimo) + " y " + str(maximo) + " : "
     while True: 
         entrada = input(invitacion) 
         try: 
