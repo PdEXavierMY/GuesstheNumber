@@ -8,9 +8,9 @@ def pedir_numero():
         try: 
             entrada = int(entrada) 
         except: 
-            pass 
+            print("Solo un número del 0 al 99 es válido")
         else: 
-            if 9 <= entrada <= 99: 
+            if 0 <= entrada <= 99: 
                 break 
     return entrada
 
