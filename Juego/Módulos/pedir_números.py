@@ -17,8 +17,8 @@ def pedir_entrada_numero(invitacion):
             return entrada
 
 def ayuda():
-    ayuda = pedir_entrada_verdadero_o_falso("¿Quieres recibir una ayuda extra durante el juego?(Se te irá actualizando el número mínimo y máximo entre el que está el número generado de entre los que vayas fallando)")
-    return ayuda
+    ayudas = pedir_entrada_verdadero_o_falso("¿Quieres recibir una ayuda extra durante el juego?(Se te irá actualizando el número mínimo y máximo entre el que está el número generado de entre los que vayas fallando)")
+    return ayudas
 
 def pedir_entrada_numero_delimitado(invitacion, minimo=MIN, maximo=MAX):
     if ayuda() == True:
