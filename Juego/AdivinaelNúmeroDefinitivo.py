@@ -9,6 +9,10 @@ def decidir_limites():
 
 def elegirnivel():
     print("Hay cuatro niveles de dificultad: 1, 2, 3, 4, aumentando la dificultad del juego cuanto mayor sea el número escogido.")
+    print("El nivel 1 va del 0 al 100")
+    print("El nivel 1 va del 0 al 1000")
+    print("El nivel 3 va del 0 al 1000000")
+    print("El nivel 4 va del 0 al 1000000000000")
     nivel = pedir_entrada_numero_delimitado("Intoduzca el nivel que quiere jugar", 1, 4)
     return nivel
 
@@ -29,7 +33,7 @@ def jugar_una_vez(numero, minimo, maximo):
     return victoria, minimo, maximo
 
 def jugar_una_vez_sinayuda(numero, minimo, maximo): 
-    intento = pedir_entrada_numero_delimitado_sinayuda("Adivine el número entre " + str(minimo) + " y " + str(maximo), minimo, maximo)
+    intento = pedir_entrada_numero_delimitado_sinayuda("Adivine el número", minimo, maximo)
     if intento < numero: 
         print("Demasiado pequeño") 
         minimo = intento + 1 
