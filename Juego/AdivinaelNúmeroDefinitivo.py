@@ -43,5 +43,3 @@ def jugar():
         if not pedir_entrada_si_o_no("¿Desea jugar una nueva partida?"):
             print("¡Hasta pronto!")
             return
-
-jugar()
