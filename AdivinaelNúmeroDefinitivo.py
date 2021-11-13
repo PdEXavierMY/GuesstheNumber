@@ -37,11 +37,9 @@ def jugar_una_PARTIDA(numero, minimo, maximo):
 
 def jugar():
     minimo, maximo = decidir_limites()
-    numero = pedir_numero_incognita(minimo, maximo)
-    jugar_una_PARTIDA(numero, minimo, maximo)
-
-if __name__ == '__main__':
-    print("Se ha ejecutado el módulo")
-    jugar()
-else:
-    print("Se ha importado el módulo")
+    while True:
+        numero = pedir_numero_incognita(minimo, maximo)
+        jugar_una_PARTIDA(numero, minimo, maximo)
+        if not pedir_entrada_si_o_no("¿Desea jugar una nueva partida?"):
+            print("¡Hasta pronto!")
+            return
