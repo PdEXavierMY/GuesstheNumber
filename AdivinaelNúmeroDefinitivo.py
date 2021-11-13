@@ -57,4 +57,8 @@ def jugar():
     numero = pedir_numero_incognita(minimo, maximo)
     jugar_una_PARTIDA(numero, minimo, maximo)
 
-jugar()
+if __name__ == '__main__':
+    print("Se ha ejecutado el módulo")
+    jugar()
+else:
+    print("Se ha importado el módulo")
