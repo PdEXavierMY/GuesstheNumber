@@ -1,6 +1,4 @@
 import sys
-MIN = 0
-MAX = 99
 
 def pedir_numero(invitacion):
     while True: 
@@ -46,8 +44,11 @@ def pedir_numero_incognita(minimo, maximo):
     return pedir_numero_limite("Introduzca el número a adivinar", minimo, maximo)
 
 def jugar_una_PARTIDA(numero, minimo, maximo):
+    rondas = 1
     while True:
         victoria, minimo, maximo = jugar_una_vez(numero, minimo, maximo)
+        print("Llevas " + str(rondas) + "intento.")
+        rondas += 1
         if victoria:
             return
 
