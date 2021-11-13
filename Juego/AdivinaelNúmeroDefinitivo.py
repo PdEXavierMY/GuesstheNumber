@@ -40,6 +40,6 @@ def jugar():
     while True:
         numero = pedir_numero_incognita(minimo, maximo)
         jugar_una_PARTIDA(numero, minimo, maximo)
-        if not pedir_entrada_si_o_no("¿Desea jugar una nueva partida?"):
+        if not pedir_entrada_si_o_no("¿Desea jugar una nueva partida?: "):
             print("¡Hasta pronto!")
             return
