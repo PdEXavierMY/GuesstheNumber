@@ -1,31 +1,14 @@
-import sys
-
-def pedir_numero(invitacion):
-    while True: 
-        entrada = input(invitacion) 
-        try: 
-            entrada = int(entrada)
-        except:
-            print("Solo estan autorizados los carácteres [0-9].", file = sys.stderr)
-        else: 
-            return entrada
+from Módulos import(pedir_entrada_numero, pedir_entrada_numero_delimitado, pedir_entrada_si_o_no)
 
 def decidir_limites():
     while True:
-        minimo = pedir_numero("¿Cuál es el límite inferior? ")
-        maximo = pedir_numero("¿Cuál es el límite superior? ")
+        minimo = pedir_entrada_numero("¿Cuál es el límite inferior? ")
+        maximo = pedir_entrada_numero("¿Cuál es el límite superior? ")
         if maximo > minimo:
             return minimo, maximo
 
-def pedir_numero_limite(invitacion, minimo, maximo):
-    while True:
-        invitacion = "{} entre {} y {} incluidos ".format(invitacion, minimo, maximo)
-        entrada = pedir_numero(invitacion) 
-        if minimo <= entrada <= maximo: 
-            return entrada
-
 def jugar_una_vez(numero, minimo, maximo): 
-    intento = pedir_numero_limite("Adivine el número", minimo, maximo) 
+    intento = pedir_entrada_numero_delimitado("Adivine el número", minimo, maximo)
     if intento < numero: 
         print("Demasiado pequeño") 
         minimo = intento + 1 
@@ -41,7 +24,7 @@ def jugar_una_vez(numero, minimo, maximo):
     return victoria, minimo, maximo
 
 def pedir_numero_incognita(minimo, maximo):
-    return pedir_numero_limite("Introduzca el número a adivinar", minimo, maximo)
+    return pedir_entrada_numero_delimitado("Introduzca el número a adivinar", minimo, maximo)
 
 def jugar_una_PARTIDA(numero, minimo, maximo):
     rondas = 1
