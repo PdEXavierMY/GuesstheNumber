@@ -1,6 +1,5 @@
 import sys
-
-from Juego.Módulos.comparar_respuestas import pedir_entrada_verdadero_o_falso
+from .comparar_respuestas import pedir_entrada_verdadero_o_falso
 
 MIN=0
 MAX=100
@@ -17,9 +16,12 @@ def pedir_entrada_numero(invitacion):
         else:
             return entrada
 
+def ayuda():
+    ayuda = pedir_entrada_verdadero_o_falso("¿Quieres recibir una ayuda extra durante el juego?(Se te irá actualizando el número mínimo y máximo entre el que está el número generado de entre los que vayas fallando)")
+    return ayuda
+
 def pedir_entrada_numero_delimitado(invitacion, minimo=MIN, maximo=MAX):
-    ayuda = pedir_entrada_verdadero_o_falso("¿Quiere ir actualizando el número mínimo y máximo entre el que se encuentra el número generado? (Es decir, recibir una ayuda extra)")
-    if ayuda == True:
+    if ayuda() == True:
         while True:
             entrada = pedir_entrada_numero(invitacion)
             if minimo <= entrada <= maximo:
