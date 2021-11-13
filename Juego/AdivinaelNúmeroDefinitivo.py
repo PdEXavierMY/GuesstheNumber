@@ -54,6 +54,7 @@ def jugar_una_PARTIDA(numero, minimo, maximo):
 
 def jugar():
     import random
+    from Módulos.pedir_números import(ayuda)
     n = elegirnivel()
     if n == 1:
         minimo = 0
@@ -67,6 +68,7 @@ def jugar():
     else:
         minimo = 0
         maximo = 1000000000000
+    ayuda()
     while True:
         numero = random.randint(minimo, maximo)
         jugar_una_PARTIDA(numero, minimo, maximo)
