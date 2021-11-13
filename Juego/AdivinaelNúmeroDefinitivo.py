@@ -32,11 +32,11 @@ def jugar_una_PARTIDA(numero, minimo, maximo):
         if victoria:
             return
 
-def rondaslimite(numero, minimo, maximo):
+def rondaslimite():
     rondas = 1
     if pedir_entrada_si_o_no("¿Desea tener intentos límite? "):
         rondaslimite = pedir_entrada_numero("¿Cuántos intentos quieres establecer como límite?")
-        while jugar_una_PARTIDA(numero, minimo, maximo):
+        while True:
             if rondas == rondaslimite:
                 print("Ya has alcanzado el máximo de intentos :( ")
                 return jugar()
@@ -44,15 +44,14 @@ def rondaslimite(numero, minimo, maximo):
                 print("Llevas " + str(rondas) + " intentos.")
                 rondas += 1
     else:
-        while jugar_una_PARTIDA(numero, minimo, maximo):
-            print("Llevas " + str(rondas) + " intentos.")
-            rondas += 1
+        print("Llevas " + str(rondas) + " intentos.")
+        rondas += 1
 
 def jugar():
     minimo, maximo = decidir_limites()
     while True:
         numero = pedir_numero_incognita(minimo, maximo)
-        rondaslimite(numero, minimo, maximo)
+        rondaslimite()
         jugar_una_PARTIDA(numero, minimo, maximo)
         if not pedir_entrada_si_o_no("¿Desea jugar una nueva partida?: "):
             print("¡Hasta pronto!")
