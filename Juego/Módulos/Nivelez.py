@@ -1,4 +1,4 @@
-import pedir_números
+from .pedir_números import (pedir_entrada_numero_delimitado)
 
 
 def nivel1():
