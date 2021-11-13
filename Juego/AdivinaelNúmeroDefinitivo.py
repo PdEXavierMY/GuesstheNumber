@@ -7,6 +7,11 @@ def decidir_limites():
         if maximo > minimo:
             return minimo, maximo
 
+def elegirnivel():
+    print("Hay cuatro niveles de dificultad: 1, 2, 3, 4, aumentando la dificultad del juego cuanto mayor sea el número escogido.")
+    nivel = pedir_entrada_numero_delimitado("Intoduzca el nivel que quiere jugar", 1, 4)
+    return nivel
+
 def jugar_una_vez(numero, minimo, maximo): 
     intento = pedir_entrada_numero_delimitado("Adivine el número", minimo, maximo)
     if intento < numero: 
@@ -49,7 +54,19 @@ def jugar_una_PARTIDA(numero, minimo, maximo):
 
 def jugar():
     import random
-    minimo, maximo = decidir_limites()
+    n = elegirnivel()
+    if n == 1:
+        minimo = 0
+        maximo = 100
+    elif n == 2:
+        minimo = 0
+        maximo = 1000
+    elif n == 3:
+        minimo = 0
+        maximo = 1000000
+    else:
+        minimo = 0
+        maximo = 1000000000000
     while True:
         numero = random.randint(minimo, maximo)
         jugar_una_PARTIDA(numero, minimo, maximo)
