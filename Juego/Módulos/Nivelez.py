@@ -1,4 +1,4 @@
-from .pedir_números import (pedir_entrada_numero, pedir_entrada_numero_delimitado)
+import pedir_números
 
 
 def nivel1():
@@ -25,3 +25,4 @@ def elegirnivel():
     print("Hay cuatro niveles de dificultad: 1, 2, 3, 4, aumentando la dificultad del juego cuanto mayor sea el número escogido")
     nivel = pedir_entrada_numero_delimitado("Intoduzca el nivel que quiere jugar", 1, 4)
     return nivel
+elegirnivel()
