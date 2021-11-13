@@ -12,7 +12,6 @@ def pedir_entrada_numero(invitacion):
             entrada = int(entrada)
         except:
             print("Solo los caracteres [0-9] están autorizados.", file = sys.stderr)
-            pass
         else:
             return entrada
 
