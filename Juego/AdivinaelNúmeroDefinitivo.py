@@ -26,6 +26,11 @@ def jugar_una_vez(numero, minimo, maximo):
 def pedir_numero_incognita(minimo, maximo):
     return pedir_entrada_numero_delimitado("Introduzca el número a adivinar", minimo, maximo)
 
+def rondaslimite():
+    rondas = 1
+    if pedir_entrada_si_o_no("¿Desea tener intentos límite?") == True:
+        rondaslimite = input("¿Cuántos intentos quieres establecer como límite?")
+
 def jugar_una_PARTIDA(numero, minimo, maximo):
     rondas = 1
     while True:
